@@ -2,6 +2,7 @@
   --background: #15202B;
   --blue-accent: #0e3953;
   --card: #192734;
+  --card-footer: #111b24;
   --hover-color: #2591d4;
   --primary-text: #FFFFFF;
   --secondary-text: #8899A6;
@@ -23,6 +24,7 @@ nav {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  border-bottom: 1px solid var(--secondary-text);
 }
 
 nav ul {
@@ -69,6 +71,7 @@ nav li {
   align-items: center;
   background-color: var(--card);
   color: var(--primary-text);
+  border: 1px solid var(--secondary-text);
 }
 
 #my-name-container {
@@ -94,6 +97,17 @@ nav li {
   border-radius: 50%;
 }
 
+#about-me-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--card-footer);
+  font-size: 1rem;
+}
+
 #aboutme-text {
   padding: 10px;
   color: var(--secondary-text);
@@ -107,14 +121,17 @@ nav li {
   overflow-y: scroll;
   position: sticky;
   top: 80px; /* Height of navbar */
-  background-color: var(--card);
+  background-color: var(--card-footer);
+  border: 1px solid var(--secondary-text);
 }
 
 .post {
   display: flex;
-  border-bottom: 1px solid #E1E8ED;
+  border: 1px solid var(--secondary-text);
   padding: 10px;
   color: var(--primary-text);
+  background-color: var(--card);
+  margin: 0.5rem;
 }
 
 .post-link-container {
