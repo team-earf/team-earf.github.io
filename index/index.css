@@ -11,7 +11,7 @@ body {
     height: 100vh;
 }
 
-.container {
+#HeaderContainer {
     width: 100%;
     height: 15%;
     display: flex;
@@ -20,8 +20,64 @@ body {
     background-color: #0084b4;
 }
 
-#Header {
-    color: #00aced;
+#HeaderText {
+    color: #F5F8FA;
     font-size: 2rem;
     font-weight: 600;
+}
+
+#MainContainer {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#WIPContainer {
+    aspect-ratio: 1/1;
+    width: 50%;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #0084b4;
+}
+
+#WIPTextContainer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#WIPText {
+    color: #F5F8FA;
+    font-size: 3vw;
+    font-weight: 600;
+}
+
+#ProjectsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    overflow: auto;
+    background-color: #E1E8ED;
+}
+
+.NonBulletedItem {
+    list-style-type: none;
+}
+
+#SoyjakBotLink {
+    font-size: 2rem;
+    color: #1DA1F2;
+    text-decoration: none;
 }
