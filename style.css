@@ -21,7 +21,7 @@ nav {
   background-color: var(--card);
   color: var(--secondary-text);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
 }
 
@@ -149,7 +149,14 @@ nav li {
   color: var(--secondary-text);
 }
 
-/* If screen gets too small */
+/* If screen width is above a certain size (desktop style) */
+@media only screen and (min-width: 1000px) {
+  .container {
+    padding-right: 300px;
+  }
+}
+
+/* If screen width gets too small */
 @media only screen and (max-width: 900px) {
   #my-name-text {
     font-size: 2vw;
