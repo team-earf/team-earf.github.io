@@ -1,85 +1,178 @@
-/* Define some variables to use for color and spacing */
 :root {
-    --twitter-blue: #1DA1F2;
-    --twitter-dark-blue: #22303C;
-    --white: #FFFFFF;
-    --bluegray: #8899A6;
-    --spacing: 1rem;
+  --background: #15202B;
+  --blue-accent: #0e3953;
+  --card: #192734;
+  --hover-color: #2591d4;
+  --primary-text: #FFFFFF;
+  --secondary-text: #8899A6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+}
+
+nav {
+  background-color: var(--card);
+  color: var(--secondary-text);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color:var(--secondary-text)
+}
+
+.navbar-links:hover {
+  color: var(--hover-color);
+}
+
+.about-me {
+  background-color: white;
+  width: 300px;
+  height: 100%; /* Full height minus navbar and padding */
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card);
+  color: var(--primary-text);
+}
+
+#my-name-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #0e3953;
+  font-size: 1rem;
+}
+
+#my-name-text {
+  font-size: 25px;
+}
+
+#aboutme-pic {
+  width: 75%;
+  height: 75%;
+  margin: 1rem;
+  object-fit: scale-down;
+  border-radius: 50%;
+}
+
+#aboutme-text {
+  padding: 10px;
+  color: var(--secondary-text);
+  overflow-wrap: break-word;
+}
+
+.posts-container {
+  background-color: #F7F9FA;
+  width: 600px;
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  position: sticky;
+  top: 80px; /* Height of navbar */
+  background-color: var(--card);
+}
+
+.post {
+  display: flex;
+  border-bottom: 1px solid #E1E8ED;
+  padding: 10px;
+  color: var(--primary-text);
+}
+
+.post-link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+.post-image {
+  background-color: #E1E8ED;
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  margin-right: 10px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+/* If screen gets too small */
+@media only screen and (max-width: 900px) {
+  #my-name-text {
+    font-size: 2vw;
   }
-  
-  /* Reset some default styles */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    color: var(--twitter-dark-blue);
-    background-color: #15202B;
-  }
-  
-  /* Style the header */
-  #MessageHeader {
-    background-color: var(--bluegray);
-    padding: var(--spacing);
-    text-align: center;
-    background-color: #22303C;
-  }
-  
-  #MessageHeaderText {
-    margin: 0;
-    color: var(--white);
-  }
-  
-  /* Style the message body */
-  #MessageBody {
-    padding: var(--spacing);
-    color: var(--bluegray);
-    text-align: center;
-  }
-  
-  #MessageBodyText {
-    margin: 0;
-  }
-  
-  /* Style the project list */
-  #ProjectListContainer {
-    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: var(--twitter-dark-blue);
-    color: var(--bluegray);
-    padding: var(--spacing);
-    text-align: center;
   }
-  
-  #ProjectListHeaderContainer {
-    margin-bottom: var(--spacing);
-    color: var(--white);
+
+  .about-me {
+    width: 100%;
+    height: 50%;
   }
-  
-  #ProjectListHeaderText {
-    margin: 0;
+
+  #my-name-text {
+    font-size: 2rem;
   }
-  
-  #ProjectListLiteral {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .posts-container {
+    width: 100%;
+    height: calc(100vh - 80px);
   }
-  
-  #ProjectListLiteral li {
-    margin-bottom: var(--spacing);
-  }
-  
-  #ProjectListLiteral li a {
-    color: var(--twitter-blue);
-    text-decoration: none;
-  }
-  
-  #ProjectListLiteral li a:hover {
-    text-decoration: underline;
-  }
-  
+}
