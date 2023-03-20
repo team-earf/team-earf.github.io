@@ -6,6 +6,7 @@
   --hover-color: #2591d4;
   --primary-text: #FFFFFF;
   --secondary-text: #8899A6;
+  --border-radius: 10px;
 }
 
 * {
@@ -72,6 +73,7 @@ nav li {
   background-color: var(--card);
   color: var(--primary-text);
   border: 1px solid var(--secondary-text);
+  border-radius: var(--border-radius);
 }
 
 #my-name-container {
@@ -83,6 +85,8 @@ nav li {
   padding: 10px;
   background-color: #0e3953;
   font-size: 1rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 #my-name-text {
@@ -106,6 +110,8 @@ nav li {
   padding: 10px;
   background-color: var(--card-footer);
   font-size: 1rem;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 #aboutme-text {
@@ -123,6 +129,7 @@ nav li {
   top: 80px; /* Height of navbar */
   background-color: var(--card-footer);
   border: 1px solid var(--secondary-text);
+  border-radius: var(--border-radius);
 }
 
 .post {
@@ -132,6 +139,7 @@ nav li {
   color: var(--primary-text);
   background-color: var(--card);
   margin: 0.5rem;
+  border-radius: var(--border-radius);
 }
 
 .post-link-container {
@@ -146,7 +154,7 @@ nav li {
   background-color: #E1E8ED;
   width: 50px;
   height: 50px;
-  /* border-radius: 50%; */
+  border-radius: 10px;
   margin-right: 10px;
 }
 
