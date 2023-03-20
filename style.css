@@ -1,0 +1,85 @@
+/* Define some variables to use for color and spacing */
+:root {
+    --twitter-blue: #1DA1F2;
+    --twitter-dark-blue: #22303C;
+    --white: #FFFFFF;
+    --bluegray: #8899A6;
+    --spacing: 1rem;
+  }
+  
+  /* Reset some default styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--twitter-dark-blue);
+    background-color: #15202B;
+  }
+  
+  /* Style the header */
+  #MessageHeader {
+    background-color: var(--bluegray);
+    padding: var(--spacing);
+    text-align: center;
+    background-color: #22303C;
+  }
+  
+  #MessageHeaderText {
+    margin: 0;
+    color: var(--white);
+  }
+  
+  /* Style the message body */
+  #MessageBody {
+    padding: var(--spacing);
+    color: var(--bluegray);
+    text-align: center;
+  }
+  
+  #MessageBodyText {
+    margin: 0;
+  }
+  
+  /* Style the project list */
+  #ProjectListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--twitter-dark-blue);
+    color: var(--bluegray);
+    padding: var(--spacing);
+    text-align: center;
+  }
+  
+  #ProjectListHeaderContainer {
+    margin-bottom: var(--spacing);
+    color: var(--white);
+  }
+  
+  #ProjectListHeaderText {
+    margin: 0;
+  }
+  
+  #ProjectListLiteral {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #ProjectListLiteral li {
+    margin-bottom: var(--spacing);
+  }
+  
+  #ProjectListLiteral li a {
+    color: var(--twitter-blue);
+    text-decoration: none;
+  }
+  
+  #ProjectListLiteral li a:hover {
+    text-decoration: underline;
+  }
+  
