@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
 	<title>❗MAD PIANO❗</title>
-	<link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js\script.js" defer></script>
 	<link rel="icon" type="image/png" href="https://drive.google.com/uc?id=1aGEGomcBgHbOee9Uoy6cXX-KhXjWVbBI" sizes="32x32" />
 	<link rel="icon" type="image/png" href="https://drive.google.com/uc?id=1wLyJeLk2tNvmqmQix92k2sL7oF_y9KyL" sizes="16x16" />
 	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 </head>
 <body>
 	<!-- Top navigation bar -->
-	<nav>
-		<ul>
-			<li><a href="https://super-mad-piano.github.io/" class="navbar-links">Home</a></li>
-			<li><a href="https://github.com/super-mad-piano" class="navbar-links">Github</a></li>
-			<li><a href="https://twitter.com/mad_piano_" class="navbar-links">Twitter</a></li>
+	<nav id="navbar">
+		<ul id="navbar-list">
+			<li class="navbar-item"><a class="navbar-link" href="https://super-mad-piano.github.io/">Home</a></li>
+			<li class="navbar-item"><a class="navbar-link" href="https://github.com/super-mad-piano">Github</a></li>
+			<li class="navbar-item"><a class="navbar-link" href="https://twitter.com/mad_piano_">Twitter</a></li>
 		</ul>
 	</nav>
 
 	<!-- Main content -->
 	<div class="container">
-		<!-- Statically placed "About Me" card. -->
+
+		<!-- Sidebar Stuff -->
 		<div class="status-sidebar">
-			
-            <!-- Information I always want people to see. -->
-			<img src="https://drive.google.com/uc?id=19nKUsEKVzAKOVLgam02dbQ-a42qwv9md" alt="Google Drive Image" id="speech-bubble"/>
-			<p id="status-text">Still reworking how I want the site to look, I'm obviously not a web designer 😂. I'll be using this for various things.</p>
-            <img src="https://drive.google.com/uc?id=1kWBS4MTB46GqB7kf7qoBnMnsPglyHiW6" alt="Google Drive Image" id="profile-pic"/>
+			<img  id="speech-bubble" src="https://drive.google.com/uc?id=19nKUsEKVzAKOVLgam02dbQ-a42qwv9md" alt="Google Drive Image"/>
+			<p id="status-text"></p>
+            <img id="profile-pic" src="https://drive.google.com/uc?id=1kWBS4MTB46GqB7kf7qoBnMnsPglyHiW6" alt="Google Drive Image"/>
 		</div>
 
 		<!-- Posts section -->
@@ -45,7 +45,6 @@
                 </a>
 			</div>
 
-			<!-- Add more posts here... -->
 		</div>
 	</div>
 </body>
