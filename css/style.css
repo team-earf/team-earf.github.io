@@ -38,6 +38,10 @@ body {
   animation: rainbow 20s ease infinite;
 }
 
+#navbar:hover {
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.418);
+}
+
 @keyframes rainbow {
   0% {
     background-position: 0% 50%;
@@ -92,14 +96,18 @@ body {
   padding: 20px;
 }
 
+/* SIDEBAR STUFF */
 .status-sidebar {
-  width: 300px;
+  width: 350px;
   height: 100%; /* Full height minus navbar and padding */
   position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--cards);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.418);
 }
 
 #profile-pic {
@@ -110,16 +118,17 @@ body {
 }
 
 #speech-bubble {
-  width: 300px; /* change the width as per your requirement */
+  width: 300px;
   height: auto; /* keep aspect ratio */
+  margin-top: 1rem;
 }
 
 
 #status-text {
   position: absolute; /* position the text relative to its closest positioned ancestor */
-  top: 60px; /* adjust the value as per your requirement */
-  left: 35px; /* adjust the value as per your requirement */
-  width: 80%;
+  top: 70px;
+  left: 60px;
+  width: 70%;
 }
 
 .posts-container {
