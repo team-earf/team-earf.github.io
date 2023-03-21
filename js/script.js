@@ -30,7 +30,7 @@ items.forEach(item => {
 
       if (isAnimating) {
         requestId = requestAnimationFrame(() => {
-          setTimeout(animate, 125); // add a delay of 100ms
+          setTimeout(animate, 125); // add a delay of 125ms
         });
       } else {
         link.textContent = originalText; // animation stopped, revert to original text
@@ -51,7 +51,6 @@ items.forEach(item => {
     link.textContent = originalText;
   });
 });
-
 
 
 // Sidebar Status
