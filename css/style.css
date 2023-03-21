@@ -131,6 +131,8 @@ body {
   width: 70%;
 }
 
+/* POSTS STUFF */
+
 .posts-container {
   width: 600px;
   height: calc(100vh - 80px);
@@ -142,15 +144,31 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.418);
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
+/* scrollbar */
+::-webkit-scrollbar-track {
+  background: var(--background-bottom);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--buttons-and-links);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-text);
 }
 
 .post {
   display: flex;
+  width: 100%;
   border-bottom: 1px solid var(--borders-and-accents);
   padding: 10px;
   color: var(--primary-text);
+}
+
+.post:hover {
+  background-color: var(--borders-and-accents);
 }
 
 .post-link-container {
