@@ -1,10 +1,17 @@
 :root {
-  --background: #15202B;
-  --blue-accent: #0e3953;
-  --card: #192734;
-  --hover-color: #2591d4;
-  --primary-text: #FFFFFF;
-  --secondary-text: #8899A6;
+  --top-gradient: #F2F2F2;
+  --bottom-gradient: #99a2aa;
+  --cards: #484a4e;
+  --borders-and-accents: #E2E2E2;
+  --buttons-and-links: #C5C5C5;
+  --hover: #ecb2b2;
+  --primary-text: #ffffff;
+  --secondary-text: #B5B5B5;
+  --textbox-text: #000000;
+}
+
+body {
+  font-family: 'Aldrich';
 }
 
 * {
@@ -14,11 +21,15 @@
 }
 
 body {
-  background-color: var(--background);
+  background-image: linear-gradient(
+    to bottom,
+    var(--top-gradient),
+    var(--bottom-gradient)
+  );
 }
 
 nav {
-  background-color: var(--card);
+  background-color: var(--cards);
   color: var(--secondary-text);
   display: flex;
   justify-content: space-around;
@@ -55,11 +66,10 @@ nav li {
 }
 
 .navbar-links:hover {
-  color: var(--hover-color);
+  color: var(--hover);
 }
 
-.about-me {
-  background-color: white;
+.status-sidebar {
   width: 300px;
   height: 100%; /* Full height minus navbar and padding */
   position: sticky;
@@ -67,54 +77,44 @@ nav li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--card);
-  color: var(--primary-text);
 }
 
-#my-name-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-  background-color: #0e3953;
-  font-size: 1rem;
-}
-
-#my-name-text {
-  font-size: 25px;
-}
-
-#aboutme-pic {
+#profile-pic {
   width: 75%;
   height: 75%;
   margin: 1rem;
   object-fit: scale-down;
-  border-radius: 50%;
 }
 
-#aboutme-text {
-  padding: 10px;
-  color: var(--secondary-text);
-  overflow-wrap: break-word;
+#speech-bubble {
+  width: 300px; /* change the width as per your requirement */
+  height: auto; /* keep aspect ratio */
+}
+
+
+#status-text {
+  position: absolute; /* position the text relative to its closest positioned ancestor */
+  top: 60px; /* adjust the value as per your requirement */
+  left: 35px; /* adjust the value as per your requirement */
+  width: 80%;
 }
 
 .posts-container {
-  background-color: #F7F9FA;
   width: 600px;
   height: calc(100vh - 80px);
   overflow-y: scroll;
   position: sticky;
   top: 80px; /* Height of navbar */
   background-color: var(--card);
+  border-radius: 10px;
 }
 
 .post {
   display: flex;
-  border-bottom: 1px solid #E1E8ED;
+  border-bottom: 1px solid var(--borders-and-accents);
   padding: 10px;
   color: var(--primary-text);
+  background-color: var(--cards);
 }
 
 .post-link-container {
@@ -126,7 +126,6 @@ nav li {
 }
 
 .post-image {
-  background-color: #E1E8ED;
   width: 50px;
   height: 50px;
   /* border-radius: 50%; */
@@ -149,33 +148,15 @@ nav li {
   color: var(--secondary-text);
 }
 
-/* If screen width is above a certain size (desktop style) */
-@media only screen and (min-width: 1000px) {
-  .container {
-    padding-right: 300px;
-  }
-}
-
-/* If screen width gets too small */
-@media only screen and (max-width: 900px) {
-  #my-name-text {
-    font-size: 2vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .container {
     flex-direction: column;
     align-items: center;
   }
 
   .about-me {
-    width: 100%;
+    width: 50%;
     height: 50%;
-  }
-
-  #my-name-text {
-    font-size: 2rem;
   }
 
   .posts-container {
