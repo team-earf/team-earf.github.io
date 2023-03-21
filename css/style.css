@@ -1,6 +1,6 @@
 :root {
   --background-top: #ffffff;
-  --background-bottom: #000000;
+  --background-bottom: #a7a7a7;
   --top-gradient: linear-gradient(135deg, #ffffff, #ffffff);
   --bottom-gradient: #c0bfbf;
   --cards: #F2F2F2;
@@ -8,7 +8,7 @@
   --buttons-and-links: #C5C5C5;
   --primary-text: #FFFFFF;
   --secondary-text: #B5B5B5;
-  --title-text: #413f3f;
+  --title-text: #535353;
   --textbox-text: #000000;
   --navbar-gradient: linear-gradient(to right, #FF69B4, #FFD700, #32CD32, #00BFFF, #9400D3);
   --metallic-color: #C6C6C6;
@@ -16,7 +16,7 @@
 
 body {
   font-family: 'Aldrich';
-  background-image: linear-gradient(var(--background-top), var(--bottom-gradient));
+  background-image: linear-gradient(var(--background-top), var(--background-bottom));
 }
 
 * {
