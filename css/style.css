@@ -160,6 +160,19 @@ body {
 #speech-bubble {
   width: 300px;
   height: auto; /* keep aspect ratio */
+  animation: speech-float 3s ease-in-out infinite;
+}
+
+@keyframes speech-float {
+  0% {
+    transform: translateY(-2px) translateZ(5px) rotateZ(-2deg);
+  }
+  50% {
+    transform: translateY(2px) translateZ(-10px) rotateZ(2deg);
+  }
+  100% {
+    transform: translateY(-2px) translateZ(20px) rotateZ(-2deg);
+  }
 }
 
 #status-text {
