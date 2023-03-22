@@ -56,6 +56,7 @@ body {
   height: 75%;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 40px;
 }
 
 /* NAVBAR */
@@ -159,7 +160,7 @@ body {
 
 #speech-bubble {
   width: 300px;
-  height: auto; /* keep aspect ratio */
+  height: 300px; /* keep aspect ratio */
   animation: speech-float 3s ease-in-out infinite;
 }
 
