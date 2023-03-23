@@ -1,8 +1,32 @@
 // Navbar Stuff
 const navLinksText = document.querySelectorAll('#navbar-list li').textContent;
-
 const items = document.querySelectorAll('#navbar-list li');
 
+// Post Section Stuff
+const postsList = document.getElementById('posts-list');
+const postSectionLabel = document.getElementById('post-section-label');
+const postContainers = document.getElementsByClassName('post-container');
+
+// Piano Images
+const pianoImg = document.getElementById('piano-img');
+const pianoNotTalkAnimation = "https://drive.google.com/uc?id=1ZbvtB0LmFPtMNOAVdE-XMXsrCkMILGHO";
+const pianoTalkAnimation = "https://drive.google.com/uc?id=1XeymKoK5YkuXdimRAoIgQb3YrI1vLv1P";
+const speechBubble = document.getElementById('speech-bubble-img');
+
+const imagesToPreload = document.getElementsByClassName('post-image');
+const pianoTalkingImages = [pianoTalkAnimation, pianoNotTalkAnimation, speechBubble]
+
+function preloadImages(list) {
+  for (let i = 0; i < list.length; i++) {
+    const img = new Image();
+    img.src = list[i];
+  }
+}
+
+preloadImages(imagesToPreload);
+preloadImages(pianoTalkingImages);
+
+// Navbar Text Wave Animation
 items.forEach(item => {
   let requestId;
   const link = item.querySelector('a');
@@ -52,7 +76,55 @@ items.forEach(item => {
   });
 });
 
+// Piano Talking Animations
 
-// Sidebar Status
-const statusText = document.querySelector('#status-text');
-statusText.textContent = "Still reworking how I want the site to look, I'm obviously not a web designer 😂. I'll be using this for various things";
+// Bringing up Piano when hovering over Posts List
+postsList.addEventListener('mouseenter', function() {
+  postsList.style.transition = 'margin-bottom 0.5s';
+  postsList.style.marginBottom = '150px';
+  
+  postSectionLabel.style.transition = 'margin-bottom 0.5s';
+  postSectionLabel.style.marginBottom = '150px';
+  
+  pianoImg.style.transition = 'bottom 0.5s';
+  pianoImg.style.bottom = '55%';
+  pianoImg.style.left = '50%';
+  pianoImg.style.transform = 'translateX(-50%)';
+  
+  speechBubble.style.transition = 'bottom 0.5s, left 0.5s';
+  speechBubble.style.bottom = '65%';
+  speechBubble.style.right = 'calc(50% + 100px)';
+});
+
+
+
+// Bringing it back down
+postsList.addEventListener('mouseleave', function() {
+  postsList.style.transition = 'margin-bottom 0.5s';
+  postsList.style.marginBottom = '0';
+  
+  postSectionLabel.style.transition = 'margin-bottom 0.5s';
+  postSectionLabel.style.marginBottom = '0';
+
+  pianoImg.style.transition = 'bottom 0.5s';
+  pianoImg.style.bottom = '20%';
+
+  speechBubble.style.transition = 'bottom 0.5s';
+  speechBubble.style.bottom = '20%';
+});
+
+for (let i = 0; i < postContainers.length; i++) {
+  postContainers[i].addEventListener('mouseenter', function() {
+    console.log('function started');
+    pianoImg.src = pianoTalkAnimation;
+    speechBubble.style.visibility = 'visible';
+  });
+}
+
+for (let i = 0; i < postContainers.length; i++) {
+  postContainers[i].addEventListener('mouseleave', function() {
+    console.log('function started');
+    pianoImg.src = pianoNotTalkAnimation;
+    speechBubble.style.visibility = 'hidden';
+  });
+}
