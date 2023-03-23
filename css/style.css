@@ -120,8 +120,9 @@ body {
 /* Piano Image */
 #piano-img {
   position: absolute;
-  bottom: 200px;
+  bottom: 40%;
   left: 40%;
+  visibility: hidden;
 }
 
 #speech-bubble-img {
@@ -130,6 +131,16 @@ body {
   width: 300px;
   height: auto;
   transform: rotate(-20deg);
+  visibility: hidden;
+  right: calc(50% + 100px); /* Set the left to 50% plus 100px */
+}
+
+#speech-bubble-text{
+  position: absolute;
+  bottom: 200px;
+  width: 250px;
+  height: auto;
+  transform: rotate(-17deg);
   visibility: hidden;
   right: calc(50% + 100px); /* Set the left to 50% plus 100px */
 }

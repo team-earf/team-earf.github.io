@@ -11,7 +11,9 @@ const postContainers = document.getElementsByClassName('post-container');
 const pianoImg = document.getElementById('piano-img');
 const pianoNotTalkAnimation = "https://drive.google.com/uc?id=1ZbvtB0LmFPtMNOAVdE-XMXsrCkMILGHO";
 const pianoTalkAnimation = "https://drive.google.com/uc?id=1XeymKoK5YkuXdimRAoIgQb3YrI1vLv1P";
+
 const speechBubble = document.getElementById('speech-bubble-img');
+const speechBubbleText = document.getElementById('speech-bubble-text');
 
 const imagesToPreload = document.getElementsByClassName('post-image');
 const pianoTalkingImages = [pianoTalkAnimation, pianoNotTalkAnimation, speechBubble]
@@ -90,10 +92,15 @@ postsList.addEventListener('mouseenter', function() {
   pianoImg.style.bottom = '55%';
   pianoImg.style.left = '50%';
   pianoImg.style.transform = 'translateX(-50%)';
+  pianoImg.style.visibility = 'visible';
   
   speechBubble.style.transition = 'bottom 0.5s, left 0.5s';
   speechBubble.style.bottom = '65%';
   speechBubble.style.right = 'calc(50% + 100px)';
+
+  speechBubbleText.style.transition = 'bottom 0.5s, left 0.5s';
+  speechBubbleText.style.bottom = '78%';
+  speechBubbleText.style.right = 'calc(50% + 120px)';
 });
 
 
@@ -111,6 +118,9 @@ postsList.addEventListener('mouseleave', function() {
 
   speechBubble.style.transition = 'bottom 0.5s';
   speechBubble.style.bottom = '20%';
+
+  speechBubbleText.style.transition = 'bottom 0.5s';
+  speechBubbleText.style.bottom = '20%';
 });
 
 for (let i = 0; i < postContainers.length; i++) {
@@ -118,6 +128,7 @@ for (let i = 0; i < postContainers.length; i++) {
     console.log('function started');
     pianoImg.src = pianoTalkAnimation;
     speechBubble.style.visibility = 'visible';
+    speechBubbleText.style.visibility = 'visible';
   });
 }
 
@@ -126,5 +137,6 @@ for (let i = 0; i < postContainers.length; i++) {
     console.log('function started');
     pianoImg.src = pianoNotTalkAnimation;
     speechBubble.style.visibility = 'hidden';
+    speechBubbleText.style.visibility = 'hidden';
   });
 }
