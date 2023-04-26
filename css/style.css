@@ -15,6 +15,7 @@
     --title-font-size: 24px;
     --border-thickness: 2px;
     --border-radius: 5px;
+    --small-padding: 15px;
     
     /* Colors */
     --primary-color: #1d1d1f;
@@ -97,6 +98,8 @@ body {
     flex-direction: column;
     overflow: scroll;
     overflow-x: hidden;
+    padding-top: var(--small-padding);
+    font-size: 1em;
 }
 
 .post-link {
@@ -164,4 +167,31 @@ body {
 .text-link {
     text-decoration: none;
     color: var(--link-color);
+}
+
+/* RRESIZING WINDOW */
+@media screen and (max-width: 600px) {
+    #navbar {
+        width: 100%;
+    }
+
+    #post-container {
+        width: 100%;
+        height: calc(100vh - var(--navbar-height));
+    }
+
+    .post {
+        width: 100%;
+        height: var(--post-height);
+    }
+
+    .post-header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .post-date {
+        padding-left: 0;
+    }
 }
